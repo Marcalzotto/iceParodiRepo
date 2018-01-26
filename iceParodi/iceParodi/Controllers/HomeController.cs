@@ -13,18 +13,59 @@ namespace iceParodi.Controllers
             return View();
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
 
             return View();
         }
+
+        public ActionResult Quienes_somos() {
+            return View();
+        }
+
+        public ActionResult Quien_eres() {
+            return View();
+        }
+
+        public ActionResult Jovenes()
+        {
+            return View();
+        }
+
+        public ActionResult Adolescentes()
+        {
+            return View();
+        }
+
+        public ActionResult Escuela_biblica()
+        {
+            return View();
+        }
+
+        public ActionResult Femenina()
+        {
+            return View();
+        }
+
+        public ActionResult Retiros()
+        {
+            return View();
+        }
+
+        public ActionResult Ensenianza()
+        {
+            return View();
+        }
+
+        public ActionResult Mensajes()
+        {
+            return View();
+        }
+
+
+
+
+
     }
 }
