@@ -237,7 +237,7 @@ h2 {
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1354px) {
+@media (min-width: 1200px){
     .navbar-brand {
         display: block;
     }

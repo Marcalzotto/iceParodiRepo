@@ -156,6 +156,13 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="imagenes\abm\close.png" />
+    <Content Include="imagenes\abm\delete.png" />
+    <Content Include="imagenes\abm\editar.png" />
+    <Content Include="imagenes\generales\adolescentes_1_low.jpg" />
+    <Content Include="imagenes\generales\adolescentes_2_low.jpg" />
+    <Content Include="imagenes\generales\adolescentes_3_low.jpg" />
+    <Content Include="imagenes\generales\adolescentes_5_low.jpg" />
     <Content Include="imagenes\lg\1tim315LG.jpg" />
     <Content Include="imagenes\lg\adolescente_lg.jpg" />
     <Content Include="imagenes\lg\deut79_lg_reducido.jpg" />
@@ -190,6 +197,7 @@
     <Content Include="imagenes\md\pared_mas_pizarra_MD_viernes.jpg" />
     <Content Include="imagenes\md\quienEres_md.jpg" />
     <Content Include="imagenes\pared_blanca.jpg" />
+    <Content Include="imagenes\perfil\foto_sin_avatar.jpg" />
     <Content Include="imagenes\sm\1tim315SM.jpg" />
     <Content Include="imagenes\sm\adolescente_sm.jpg" />
     <Content Include="imagenes\sm\ebd_sm.jpg" />
@@ -273,6 +281,7 @@
     <Content Include="Views\Home\Retiros.cshtml" />
     <Content Include="Views\Home\Ensenianza.cshtml" />
     <Content Include="Views\Home\Mensajes.cshtml" />
+    <Content Include="Views\Home\VerMensajes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

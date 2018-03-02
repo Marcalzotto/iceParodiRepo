@@ -63,7 +63,11 @@ namespace iceParodi.Controllers
             return View();
         }
 
-
+        public ActionResult VerMensajes(string reunion)
+        {
+            ViewBag.reunion = reunion;
+            return View();
+        }
 
 
 

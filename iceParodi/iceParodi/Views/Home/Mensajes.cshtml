@@ -1,7 +1,61 @@
 ﻿
 @{
     ViewBag.Title = "Mensajes";
+
 }
 
-<h2>Mensajes</h2>
+<div class="clear clearfix visible-xs-block">
+
+</div>
+<div class="container">
+    <div class="row">
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h1 align="center">Audios del 2017 para descargar</h1>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3 align="center"><a href="https://mega.nz/#F!ckpmzaYA!aDoyKIYPeI2idKI7sIIJOQ!Q9JHCYIA" target="_blank">Mes de Enero</a></h3>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3 align="center"><a href="https://mega.nz/#F!ckpmzaYA!aDoyKIYPeI2idKI7sIIJOQ!A1ZzCLiS" target="_blank">Mes de Febrero</a></h3>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3 align="center"><a href="https://mega.nz/#F!ckpmzaYA!aDoyKIYPeI2idKI7sIIJOQ!R9gEiCiK" target="_blank">Mes de Marzo</a></h3>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3 align="center"><a href="https://mega.nz/#F!ckpmzaYA!aDoyKIYPeI2idKI7sIIJOQ!4ognzaQK" target="_blank">Mes de Abril</a></h3>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3 align="center"><a href="https://mega.nz/#F!ckpmzaYA!aDoyKIYPeI2idKI7sIIJOQ!psA1xIZT" target="_blank">Mes de Noviembre</a></h3>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h1 align="center">Audios para escuchar</h1>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3 align="center">@Html.ActionLink("Reunion de predicacion","VerMensajes",new { reunion = "Predicacion" })</h3>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3 align="center">@Html.ActionLink("Reunion de familia","VerMensajes",new { reunion = "Familia" })</h3>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3 align="center">@Html.ActionLink("Reunion de Matrimonios","VerMensajes",new { reunion = "Matrimonios" })</h3>
+        </div>
+
+    </div>
+
+</div>
+<div class="container" id="resultado">
+
+</div>
+
+<div class="clear clearfix visible-lg-block">
+
+</div>
+<div class="well oculto">
+
+</div>
 
