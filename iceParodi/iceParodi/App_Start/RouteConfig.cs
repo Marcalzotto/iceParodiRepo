@@ -18,6 +18,13 @@ namespace iceParodi
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "Login",
+                url: "{controller}/{action}",
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional } 
+                //accion por defecto, sino se especifica ningun controller se utilizara el home y el action index
+            );
         }
     }
 }
