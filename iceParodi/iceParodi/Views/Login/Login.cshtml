@@ -1,18 +1,30 @@
-﻿
+﻿@model iceParodi.Models.User
 @{
-    Layout = null;
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout_admin.cshtml";
+    
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>login</title>
-</head>
-<body>
-    <div> 
-        <h1>Vista del login.</h1>
+<h2>Pagina de administracion</h2>
+
+    
+    <div class="container">
+        <div class="form-group">
+            <div class="form-control">
+                <label for="username">Introducir Usuario</label>
+                <input type="text" name="username" value="" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-control">
+                <label for="username">Introducir Password</label>
+                <input type="password" name="pass" value="" />
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="submit" name="" value="Enviar" />
+            <input type="reset" name="" value="Borrar" />
+        </div>
     </div>
-</body>
-</html>
+
