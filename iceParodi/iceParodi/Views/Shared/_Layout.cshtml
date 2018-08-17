@@ -3,41 +3,36 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@ViewBag.Title - Ice Parodi</title>
-    @Styles.Render("~/Content/bootstrap.css")
-    @Styles.Render("~/Content/estilosIce.css")
+    @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Quienes Somos", "Quienes_somos", "Home")</li>
-                    <li>@Html.ActionLink("Quien Eres", "Quien_eres", "Home")</li>
-                    <li>@Html.ActionLink("Jovenes", "Jovenes", "Home")</li>
-                    <li>@Html.ActionLink("Adolescentes", "Adolescentes", "Home")</li>
-                    <li>@Html.ActionLink("E.B.D", "Escuela_biblica", "Home")</li>
-                    <li>@Html.ActionLink("Femenina", "Femenina", "Home")</li>
-                    <li>@Html.ActionLink("Retiros", "Retiros", "Home")</li>
-                    <li>@Html.ActionLink("Enseñanza", "Ensenianza", "Home")</li>
-                    <li>@Html.ActionLink("Mensajes", "Mensajes", "Home")</li>
-                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
-                </ul>
-            </div>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="#">ICE PARODI</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav navbar-collapse">
+                <li class="nav_item">@Html.ActionLink("Inicio", "Index", "Home")</li>
+                <li class="nav_item">@Html.ActionLink("Quienes Somos", "Quienes_somos", "Home")</li>
+                <li class="nav_item">@Html.ActionLink("Quien Eres", "Quien_eres", "Home")</li>
+                <li class="nav_item">@Html.ActionLink("Jovenes", "Jovenes", "Home")</li>
+                <li class="nav_item">@Html.ActionLink("Adolescentes", "Adolescentes", "Home")</li>
+                <li class="nav_item">@Html.ActionLink("E.B.D", "Escuela_biblica", "Home")</li>
+                <li class="nav_item">@Html.ActionLink("Femenina", "Femenina", "Home")</li>
+                <li class="nav_item">@Html.ActionLink("Retiros", "Retiros", "Home")</li>
+                <li class="nav_item">@Html.ActionLink("Enseñanza", "Ensenianza", "Home")</li>
+                <li class="nav_item">@Html.ActionLink("Mensajes", "Mensajes", "Home")</li>
+                <li class="nav_item">@Html.ActionLink("Contacto", "Contact", "Home")</li>
+            </ul>
         </div>
-    </div>
-    <div class="well-navbar"></div>
+    </nav>
+  
     <!--<div class="container body-content">-->
     @RenderBody()
     <!--<hr />-->

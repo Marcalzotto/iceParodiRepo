@@ -24,7 +24,6 @@ namespace iceParodi
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.min.css",
                       "~/Content/bootstrap.css",
                       "~/Content/estilosIce.css"));
         }

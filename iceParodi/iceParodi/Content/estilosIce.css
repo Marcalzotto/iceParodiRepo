@@ -1,9 +1,6 @@
 ﻿/*@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,700|Open+Sans+Condensed:300,700");*/
 @import url("font-awesome.min.css");
 
-
-
-
 body {
     background-image: url('../imagenes/pared_blanca.jpg');
     background-repeat: repeat-y;
@@ -55,10 +52,12 @@ container-fluid{
     background-color: #ffffff;
 }
 
-nav ul li {
-    margin-left: 20px;
+.nav_item a {
+    color: #ffffff;
+    font-size: 18px;
+    font-family: Helvetica;
+    font-weight: bolder;
 }
-
 @-moz-document url-prefix() {
     nav ul li {
         margin-left: 22px;
@@ -124,7 +123,7 @@ h2 {
         text-align: center;
         font-weight: bold;
     }
-
+    
     #titulo {
         font-size: 12pt;
     }
@@ -430,8 +429,8 @@ aside {
 }
 
 footer {
-    background-color: #000000;
-    color: white;
+    background-color: rgb(33, 37, 41); 
+    color: #ffffff;
     font-family: Helvetica;
     font-weight: bolder;
     font-size: 15pt;
