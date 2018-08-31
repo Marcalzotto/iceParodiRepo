@@ -2,29 +2,26 @@
 @{
     ViewBag.Title = "Login";
     Layout = "~/Views/Shared/_Layout_admin.cshtml";
-    
+    ///Html.EnableClientValidation(true);
+    //Html.EnableUnobtrusiveJavaScript(true);
 }
 
 
 <h2>Pagina de administracion</h2>
 
-    
-    <div class="container">
-        <div class="form-group">
-            <div class="form-control">
-                <label for="username">Introducir Usuario</label>
-                <input type="text" name="username" value="" />
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="form-control">
-                <label for="username">Introducir Password</label>
-                <input type="password" name="pass" value="" />
-            </div>
-        </div>
-        <div class="form-group">
-            <input type="submit" name="" value="Enviar" />
-            <input type="reset" name="" value="Borrar" />
-        </div>
-    </div>
+@using (@Html.BeginForm())
+{
+<div class="form-group">
+    @Html.TextBoxFor(u => u.Nombre, new { Class="form-control", Type="text", Placeholder = "Introducir nombre"})
+    @Html.ValidationMessageFor(u => u.Nombre)
+</div>
+<div class="form-group">
+    @Html.TextBoxFor(u => u.Pass, new { Class = "form-control", Type="password", Placeholder = "Introducir Password"})
+    @Html.ValidationMessageFor(u => u.Pass)
+</div>
+<div class="form-group">
+    <input type="submit" name="" class="btn btn-primary" value="Enviar" id="btn_enviar" />
+    <input type="reset" name="" class="btn btn-primary" value="Borrar" />
+</div>
+}
 

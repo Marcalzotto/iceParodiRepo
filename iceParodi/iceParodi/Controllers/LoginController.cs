@@ -9,21 +9,22 @@ namespace iceParodi.Controllers
     public class LoginController : Controller
     {
         // GET: Login
+        [HttpGet]
         public ActionResult Login()
         {
             var usuario = new User();
 
-            return View(usuario);
+            return View();
         }
         [HttpPost]
         public ActionResult Login(User usuario)
         {
-            if (ModelState.IsValid)
-            {
-                return RedirectToAction("MessageAdmin", "Login");
 
+            if (!ModelState.IsValid)
+            {
+                return View();
             }
-            return View(usuario);
+            return RedirectToAction("MessageAdmin");
         }
 
         public ActionResult MessageAdmin()

@@ -16,11 +16,12 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div>
+    <div class="container">
         @RenderBody()
     </div>
-    @Scripts.Render("~/bundles/Jquery")
+    @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+
     @RenderSection("scripts", required: false)
 </body>
 </html>
