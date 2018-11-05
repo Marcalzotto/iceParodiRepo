@@ -22,7 +22,7 @@ namespace iceParodi
             routes.MapRoute(
                 name: "Login",
                 url: "{controller}/{action}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional } 
+                defaults: new { controller = "Login", action = "Login", id = UrlParameter.Optional } 
                 //accion por defecto, sino se especifica ningun controller se utilizara el home y el action index
             );
         }

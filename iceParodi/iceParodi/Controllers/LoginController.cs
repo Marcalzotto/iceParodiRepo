@@ -11,25 +11,56 @@ namespace iceParodi.Controllers
         // GET: Login
         [HttpGet]
         public ActionResult Login()
-        {
-            var usuario = new User();
-
+        {             
             return View();
         }
         [HttpPost]
-        public ActionResult Login(User usuario)
+        public ActionResult MessageAdmin(User usuario)
         {
 
-            if (!ModelState.IsValid)
-            {
-                return View();
+            if (!ModelState.IsValid){
+
+                return View("Login");
+
+            }else{
+                Mensaje msj = new Mensaje();
+                if (msj.Reuniones == null) {
+
+                    msj.Reuniones = new SelectList(new List<SelectListItem>() {
+                        new SelectListItem(){Text = "Elegir Reunion", Value = "null"},
+                        new SelectListItem(){Text = "Predicacion", Value = "1"},
+                        new SelectListItem(){Text = "Ensenianza", Value = "2"},
+                        new SelectListItem(){Text = "Jovenes", Value = "3"},
+                        new SelectListItem(){Text = "Femenina", Value = "4"},
+                        new SelectListItem(){Text = "Retiro", Value = "5"},
+                        new SelectListItem(){Text = "Matrimonios", Value = "6"},
+                        new SelectListItem(){Text = "Adolescentes", Value = "7"}
+
+                    },"Value","Text");
+                }
+
+                return View(msj);
+
             }
-            return RedirectToAction("MessageAdmin");
+            
         }
 
+        [HttpPost] //queda comentado por ahora
+        public ActionResult MessageAdmin(Mensaje msj)
+        {
+            if (ModelState.IsValid)
+            {
+                ViewBag.messaje = "Mensaje guardado";
+                return View();
+            }
+            return View();
+        }
+        [HttpGet]
         public ActionResult MessageAdmin()
         {
-            return View();
+
+            return RedirectToAction("Login");
+
         }
     }
 }

@@ -24,6 +24,12 @@ namespace iceParodi
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/estilosIce.css"));
+
+            bundles.Add(new StyleBundle("~/tabs/css").Include(
+                      "~/Content/bootstrap.css",
+                      "~/Content/tabs-responsive.css"));
+           
+
         }
     }
 }

@@ -1,18 +1,112 @@
 ﻿
+@model iceParodi.Models.Mensaje
 @{
     Layout = "~/Views/Shared/_Layout_admin.cshtml";
+    string aviso = ViewBag.messaje;
+    if (aviso == null) {
+
+    }
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>MessageAdmin</title>
-</head>
-<body>
-    <div>
+
+    <h1 align="center">MessageAdmin</h1>
+    <div class="container mt-4">
+
+        <ul class="nav nav-tabs responsive " role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Crear Mensaje</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#profile" role="tab">Modificar/Eliminar Mensaje</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#messages" role="tab">Crear Usuario</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#upddelus" role="tab">Modificar/Eliminar Usuario</a>
+            </li>
+        </ul><!-- Tab panes -->
         
+        <div class="tab-content responsive">
+           
+            <div class="tab-pane active" id="home" role="tabpanel">
+                <div class="container">
+                    @using (Html.BeginForm("MessageAdmin","Login"))
+                    {
+                        <div class="form-group">
+                            @Html.TextBoxFor(msj => msj.NombreOrador, new { Class = "form-control", Type = "text", PlaceHolder = "Nombre del Orador" })
+                            @Html.ValidationMessageFor(msj => msj.NombreOrador)
+                        </div>
+                        <div class="form-group">
+                            @Html.TextBoxFor(msj => msj.ApellidoOrador, new { Class = "form-control", Type = "text", PlaceHolder = "Apellido del Orador" })
+                            @Html.ValidationMessageFor(msj => msj.ApellidoOrador)
+                        </div>
+
+                        <div class="form-group">
+                            @Html.DropDownListFor(msj => msj.ReunionElegida, Model.Reuniones, new { Class = "form-control" })
+                            @Html.ValidationMessageFor(msj => msj.ReunionElegida)
+                        </div>
+
+                        <div class="form-group">
+                            @Html.TextBoxFor(msj => msj.TituloMensaje, new { Class = "form-control", Type = "text", PlaceHolder = "Titulo del Mensaje" })
+                            @Html.ValidationMessageFor(msj => msj.TituloMensaje)
+                        </div>
+                        <div class="form-group">
+                            @Html.TextBoxFor(msj => msj.Fecha, new { Class = "form-control", Type = "date" })
+                            @Html.ValidationMessageFor(msj => msj.Fecha)
+                        </div>
+                        <div class="form-group">
+                            @Html.TextBoxFor(msj => msj.EnlaceChirbit, new { Class = "form-control", Type = "text", Placeholder = "Introducir URL Chirbit" })
+                            @Html.ValidationMessageFor(msj => msj.EnlaceChirbit)
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="" class="btn btn-primary" value="Crear" id="btn_guardar" />
+                            <input type="reset" name="" class="btn btn-primary" value="Borrar" />
+                        </div>
+                        <h4>@aviso</h4>
+                    }
+                </div>
+            </div>
+            <div class="tab-pane" id="profile" role="tabpanel">
+                <div class="container-fluid">
+                    <div class="row mt-3">
+                        <div class="col-9">
+                            <p class="h3">Second Panel</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi impedit, quae enim, id nobis et fugit aut voluptates reprehenderit, atque dolore, eveniet velit repellat. Explicabo sunt corporis in. Beatae, vel!</p>
+                        </div>
+                        <div class="col-3"><img alt="macbook_air_on_desk_925x" src="https://preview.ibb.co/f2foiF/macbook_air_on_desk_925x.jpg" class="w-100"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="messages" role="tabpanel">
+                <div class="container-fluid">
+                    <div class="row mt-3">
+                        <div class="col">
+                            <p class="h3">Third Panel</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi impedit, quae enim, id nobis et fugit aut voluptates reprehenderit, atque dolore, eveniet velit repellat. Beatae, vel!</p>
+                            <ul>
+                                <li>Explicabo sunt corporis in.</li>
+                                <li>Explicabo sunt corporis in.</li>
+                                <li>Explicabo sunt corporis in.</li>
+                                <li>Explicabo sunt corporis in.</li>
+                                <li>Explicabo sunt corporis in.</li>
+                                <li>Explicabo sunt corporis in.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="upddelus" role="tabpanel">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">Iria un formulario para listar y eliminar o modificar usuarios</div>
+                        <div class="col-lg-1"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</body>
-</html>
+

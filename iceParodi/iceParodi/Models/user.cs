@@ -7,14 +7,33 @@ using System.Web;
 namespace iceParodi.Models
 {
     public class User
-    {   
+    {
+        private string _Nombre;
+        private string _Pass;
+        private int _Rol;
+
         [Required(ErrorMessage = "Por favor introduce el nombre")]
-        public string Nombre { get; set; }
+        [MinLength(8, ErrorMessage = "El nombre debe tener 8 caracteres como minimo")]
+        [MaxLength(20, ErrorMessage = "El nombre debe tener 20 caracteres como maximo")]
+        public string Nombre {
+            get {return _Nombre;}
+            set {_Nombre = value;}
+        }
+        
 
         [Required(ErrorMessage = "Por favor introduce el password")]
-        public string Pass { get; set; }
+        [MinLength(10,ErrorMessage = "El password debe tener 10 caracteres como minimo")]
+        [MaxLength(20,ErrorMessage = "El password debe tener 20 caracteres como maximo")]
+        public string Pass{
+            get { return _Pass; }
+            set { _Pass = value; }
+        }
 
         [Required(ErrorMessage = "Por favor introduce el rol")]
-        public int Rol { get; set; }
+        //[Range(1,3 ,ErrorMessage = "El rol introducido no es correcto")]
+        public int Rol {
+            get { return _Rol; }
+            set { _Rol = value;}
+        }
     }
 }
